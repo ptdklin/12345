@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инструкция: Как мыть руки</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .time-box {
+            background: #e8f4fc;
+            border-left: 5px solid #4b6cb7;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .time-icon {
+            font-size: 2rem;
+            color: #4b6cb7;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .step {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #e9ecef;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #4b6cb7;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            color: #182848;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .warnings {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+        
+        .warnings h3 {
+            color: #856404;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #666;
+            border-top: 1px solid #dee2e6;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+            
+            .steps {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧼 Инструкция по мытью рук</h1>
+            <p class="subtitle">Кратко, понятно, эффективно</p>
+        </div>
+        
+        <div class="content">
+            <div class="time-box">
+                <div class="time-icon">⏱️</div>
+                <div>
+                    <strong>Время процедуры:</strong> 40-60 секунд<br>
+                    <strong>Когда мыть:</strong> до/после еды, после улицы, туалета, контакта с больными
+                </div>
+            </div>
+            
+            <h2 style="text-align: center; color: #182848; margin: 30px 0;">5 ключевых шагов</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Смочить и намылить</h3>
+                    <p>Включите теплую воду. Возьмите мыло (жидкое лучше) и хорошо вспеньте в ладонях.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Тереть ладони</h3>
+                    <p>Круговыми движениями потрите ладонь о ладонь в течение 10 секунд.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Пальцы и ногти</h3>
+                    <p>Между пальцами, большие пальцы, кончики пальцев о ладонь. Не забудьте про ногти!</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Тыльная сторона</h3>
+                    <p>Потрите тыльные стороны рук, переплетая пальцы. Захватите запястья.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Смыть и вытереть</h3>
+                    <p>Тщательно смойте мыло проточной водой. Вытрите насухо чистым полотенцем.</p>
+                </div>
+            </div>
+            
+            <div class="warnings">
+                <h3>⚠️ Важно помнить:</h3>
+                <ul>
+                    <li>Вытирайте руки <strong>насухо</strong> — влажные разносят больше микробов</li>
+                    <li>Закрывайте кран через салфетку или локтем</li>
+                    <li>Нет воды? Используйте антисептик с 60%+ спирта</li>
+                    <li>Не пропускайте труднодоступные места (большие пальцы, под ногтями)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Эта простая привычка защищает от вирусов, бактерий и инфекций</p>
+            <p style="margin-top: 5px; font-size: 0.8rem;">Инструкция составлена по рекомендациям ВОЗ</p>
+        </div>
+    </div>
+</body>
+</html>
