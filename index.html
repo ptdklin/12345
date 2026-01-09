@@ -3,723 +3,501 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Инструкция по заполнению чек-листа КОИ для управляющих компаний</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Инструкция по заполнению чек-листа КОИ</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background-color: #f8f9fa;
-            color: #333;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #f9fafb;
+            color: #111827;
             line-height: 1.6;
-            padding: 0 10px;
-        }
-        
-        .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            background-color: white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-            border-radius: 8px;
-            overflow: hidden;
-            margin-top: 20px;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #e5e7eb;
             margin-bottom: 40px;
         }
         
-        header {
-            background: linear-gradient(135deg, #1a3a8f 0%, #2a5bd7 100%);
-            color: white;
-            padding: 30px 40px;
-            position: relative;
+        .site-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1e3a8a;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
         }
         
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
+        .site-subtitle {
+            font-size: 16px;
+            color: #6b7280;
+            margin-bottom: 20px;
+            line-height: 1.4;
         }
         
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .logo {
-            font-size: 2.5rem;
-            color: #4CAF50;
-            background: white;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .title-area h1 {
-            font-size: 1.8rem;
-            margin-bottom: 5px;
+        .document-title {
+            font-size: 24px;
             font-weight: 600;
+            color: #111827;
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3b82f6;
+            display: inline-block;
         }
         
-        .title-area .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        .header-badge {
-            background-color: rgba(255, 255, 255, 0.15);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 15px;
-        }
-        
-        .content {
-            padding: 40px;
-        }
-        
-        .section {
-            margin-bottom: 40px;
-            border-left: 4px solid #2a5bd7;
-            padding-left: 20px;
+        .content-section {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
         
         .section-title {
-            color: #1a3a8f;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .section-title i {
-            color: #4CAF50;
-        }
-        
-        .subsection {
-            margin-bottom: 25px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e5e7eb;
         }
         
         .subsection-title {
-            color: #2a5bd7;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+            font-size: 18px;
             font-weight: 600;
+            color: #374151;
+            margin: 25px 0 15px 0;
         }
         
         .text {
-            margin-bottom: 15px;
+            margin-bottom: 16px;
+            color: #4b5563;
         }
         
-        .highlight {
-            background-color: #f0f7ff;
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 3px solid #2a5bd7;
+        .numbered-list {
+            list-style-type: decimal;
+            padding-left: 24px;
             margin: 15px 0;
+        }
+        
+        .numbered-list li {
+            margin-bottom: 10px;
+            color: #4b5563;
+        }
+        
+        .bullet-list {
+            list-style-type: disc;
+            padding-left: 24px;
+            margin: 15px 0;
+        }
+        
+        .bullet-list li {
+            margin-bottom: 8px;
+            color: #4b5563;
+        }
+        
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
         }
         
         .example-box {
-            background-color: #f9f9f9;
-            border: 1px solid #e0e0e0;
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 20px;
+            margin: 20px 0;
             border-radius: 6px;
-            padding: 15px;
-            margin: 15px 0;
-            font-family: 'Courier New', monospace;
-            font-size: 0.95rem;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        .data-table th {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: left;
+            padding: 12px 16px;
+            font-weight: 600;
+        }
+        
+        .data-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e5e7eb;
+            color: #4b5563;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background-color: #f9fafb;
         }
         
         .principle-card {
-            background-color: #f8fbff;
-            border: 1px solid #d1e3ff;
-            border-radius: 8px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
             padding: 20px;
-            margin-bottom: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .principle-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .principle-title {
-            color: #1a3a8f;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .principle-title .number {
-            background-color: #2a5bd7;
-            color: white;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-        }
-        
-        .columns-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-        }
-        
-        .columns-table th {
-            background-color: #2a5bd7;
-            color: white;
-            padding: 12px 15px;
-            text-align: left;
-            font-weight: 600;
-        }
-        
-        .columns-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .columns-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        
-        .columns-table tr:hover {
-            background-color: #f0f7ff;
-        }
-        
-        .status-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 15px 0;
-        }
-        
-        .badge {
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        
-        .badge-done {
-            background-color: #e7f7e7;
-            color: #2e7d32;
-        }
-        
-        .badge-in-progress {
-            background-color: #fff3e0;
-            color: #f57c00;
-        }
-        
-        .badge-planned {
-            background-color: #e8eaf6;
-            color: #3949ab;
-        }
-        
-        .badge-not-done {
-            background-color: #ffebee;
-            color: #c62828;
-        }
-        
-        .contacts {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 20px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .contact-icon {
-            background-color: #2a5bd7;
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        footer {
-            background-color: #1a1f36;
-            color: white;
-            padding: 30px 40px;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .footer-logo {
-            font-size: 2rem;
-            color: #4CAF50;
             margin-bottom: 15px;
         }
         
-        .footer-text {
-            opacity: 0.8;
-            font-size: 0.95rem;
-            line-height: 1.6;
+        .principle-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
         }
         
-        .disclaimer {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.85rem;
-            opacity: 0.7;
+        .principle-number {
+            background-color: #1e3a8a;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .principle-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #111827;
+        }
+        
+        .contact-info {
+            background-color: #f0f9ff;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid #bae6fd;
+        }
+        
+        .contact-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0369a1;
+            margin-bottom: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 40px;
+            border-top: 1px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 14px;
+        }
+        
+        .footer-logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 10px;
         }
         
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                align-items: flex-start;
+            body {
+                padding: 15px;
             }
             
-            .header-badge {
-                align-self: flex-start;
+            .content-section {
+                padding: 20px;
             }
             
-            .content {
-                padding: 25px;
+            .site-title {
+                font-size: 24px;
             }
             
-            .section {
-                padding-left: 15px;
+            .document-title {
+                font-size: 20px;
             }
             
-            .columns-table {
-                font-size: 0.9rem;
-            }
-            
-            .columns-table th, .columns-table td {
-                padding: 8px 10px;
+            .section-title {
+                font-size: 18px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-content">
-                <div class="logo-area">
-                    <div class="logo">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="title-area">
-                        <h1>Инструкция по заполнению чек-листа Кодекса ответственного инвестирования (КОИ) для управляющих компаний</h1>
-                        <div class="subtitle">Ассоциация розничных инвесторов (АРИ)</div>
-                    </div>
-                </div>
-                <div class="header-badge">
-                    <i class="fas fa-calendar-alt"></i>
-                    Актуально на 2025 год
-                </div>
-            </div>
-        </header>
+    <div class="header">
+        <div class="site-title">АССОЦИАЦИЯ РОЗНИЧНЫХ ИНВЕСТОРОВ</div>
+        <div class="site-subtitle">Объединение розничных инвесторов российских эмитентов</div>
+        <div class="document-title">Инструкция по заполнению чек-листа Кодекса ответственного инвестирования (КОИ) для управляющих компаний</div>
+    </div>
+    
+    <div class="content-section">
+        <h2 class="section-title">1. Общие положения</h2>
         
-        <div class="content">
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-book"></i> 1. Общие положения</h2>
-                
-                <div class="subsection">
-                    <div class="text">
-                        1.1. Ассоциация розничных инвесторов (АРИ) осуществляет консолидацию отчетности управляющих компаний (УК) о внедрении Кодекса ответственного инвестирования (КОИ) согласно Информационному письму Банка России от 07.07.2025 № ИН-02-28/90.
-                    </div>
-                    
-                    <div class="text">
-                        1.2. Настоящая инструкция разработана на основе:
-                    </div>
-                    
-                    <div class="highlight">
-                        • Кодекса ответственного инвестирования (приложение 1 к письму Банка России)<br>
-                        • Формы уведомления о статусе внедрения принципов КОИ (приложение 2)<br>
-                        • Чек-листа АРИ по методологии комментариев
-                    </div>
-                    
-                    <div class="text">
-                        1.3. Управляющим компаниям — институциональным инвесторам рекомендуется направлять заполненный чек-лист в АРИ для формирования консолидированного отчета в Банк России.
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-tasks"></i> 2. Порядок заполнения чек-листа</h2>
-                
-                <div class="subsection">
-                    <h3 class="subsection-title">2.1. Общая структура чек-листа</h3>
-                    <div class="text">
-                        Чек-лист содержит следующие колонки:
-                    </div>
-                    
-                    <table class="columns-table">
-                        <thead>
-                            <tr>
-                                <th>Колонка</th>
-                                <th>Описание</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>A</td>
-                                <td>Принцип КОИ (сгруппированные по 9 принципам)</td>
-                            </tr>
-                            <tr>
-                                <td>B</td>
-                                <td>Мероприятие/действие институционального инвестора</td>
-                            </tr>
-                            <tr>
-                                <td>C</td>
-                                <td>Рекомендуемая формулировка комментария для УК</td>
-                            </tr>
-                            <tr>
-                                <td>D</td>
-                                <td>Реализация (УК/АРИ)</td>
-                            </tr>
-                            <tr>
-                                <td>E</td>
-                                <td>Комментарий управляющей компании</td>
-                            </tr>
-                            <tr>
-                                <td>F</td>
-                                <td>Итоговый комментарий АРИ</td>
-                            </tr>
-                            <tr>
-                                <td>G</td>
-                                <td>Статус</td>
-                            </tr>
-                            <tr>
-                                <td>H</td>
-                                <td>Срок реализации</td>
-                            </tr>
-                            <tr>
-                                <td>I, J</td>
-                                <td>Ответственные</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <div class="subsection">
-                    <h3 class="subsection-title">2.2. Подробные инструкции по заполнению</h3>
-                    
-                    <div class="principle-card">
-                        <div class="principle-title">
-                            <span class="number">C</span>
-                            <span>Колонка C: Рекомендуемая формулировка комментария для УК</span>
-                        </div>
-                        <div class="text">
-                            Заполняется АРИ на основе рекомендаций Кодекса. Содержит примерные формулировки, которые УК могут использовать при описании своих практик. Не требует заполнения УК.
-                        </div>
-                    </div>
-                    
-                    <div class="principle-card">
-                        <div class="principle-title">
-                            <span class="number">D</span>
-                            <span>Колонка D: Реализация (УК/АРИ)</span>
-                        </div>
-                        <div class="text">
-                            Указывается ответственная сторона:<br>
-                            • "УК" — если мероприятие реализуется непосредственно управляющей компанией<br>
-                            • "АРИ" — если требуется участие/координация со стороны Ассоциации<br>
-                            • "УК/АРИ" — при совместной реализации
-                        </div>
-                    </div>
-                    
-                    <div class="principle-card">
-                        <div class="principle-title">
-                            <span class="number">E</span>
-                            <span>Колонка E: Комментарий управляющей компании</span>
-                        </div>
-                        <div class="text">
-                            Обязательное поле для заполнения УК. Описание фактических мероприятий, выполненных УК в рамках конкретного пункта.
-                        </div>
-                        <div class="example-box">
-                            <strong>Примеры заполнения:</strong><br><br>
-                            <em>Для пункта "1.1. Принятие решения о следовании Кодексу":</em><br>
-                            "Решение принято Правлением УК 15.09.2024 (протокол № 45). Разработана и утверждена Политика ответственного инвестирования от 20.09.2024."<br><br>
-                            <em>Для пункта "3.1. Участие в общих собраниях акционеров":</em><br>
-                            "В 2024 году участвовали в 78 собраниях акционеров по 45 эмитентам. Доля участия составила 92% от общего количества доступных для голосования собраний."
-                        </div>
-                    </div>
-                    
-                    <div class="principle-card">
-                        <div class="principle-title">
-                            <span class="number">G</span>
-                            <span>Колонка G: Статус</span>
-                        </div>
-                        <div class="text">
-                            Указывается текущий статус реализации:
-                        </div>
-                        <div class="status-badges">
-                            <span class="badge badge-done">Выполнено</span>
-                            <span class="badge badge-in-progress">В процессе</span>
-                            <span class="badge badge-planned">Запланировано</span>
-                            <span class="badge badge-not-done">Не выполняется</span>
-                        </div>
-                        <div class="text">
-                            "Выполнено" — мероприятие полностью реализовано<br>
-                            "В процессе" — реализация начата, но не завершена<br>
-                            "Запланировано" — запланировано к реализации<br>
-                            "Не выполняется" — не планируется к реализации (с обоснованием в колонке E)
-                        </div>
-                    </div>
-                    
-                    <div class="principle-card">
-                        <div class="principle-title">
-                            <span class="number">H</span>
-                            <span>Колонка H: Срок реализации</span>
-                        </div>
-                        <div class="text">
-                            • Для статусов "В процессе" и "Запланировано" указывается планируемая дата завершения (ДД.ММ.ГГГГ)<br>
-                            • Для статуса "Выполнено" указывается дата фактического завершения
-                        </div>
-                    </div>
-                    
-                    <div class="principle-card">
-                        <div class="principle-title">
-                            <span class="number">I, J</span>
-                            <span>Колонки I, J: Ответственные</span>
-                        </div>
-                        <div class="text">
-                            Указываются ФИО и должности ответственных лиц в УК.<br>
-                            Колонка I — основной ответственный<br>
-                            Колонка J — дополнительный ответственный/контролирующее лицо
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-star"></i> 3. Особенности заполнения по принципам КОИ</h2>
-                
-                <div class="principle-card">
-                    <div class="principle-title">
-                        <span class="number">1</span>
-                        <span>Принцип 1: Организация условий ответственного инвестирования</span>
-                    </div>
-                    <div class="text">
-                        Акцент на формализации процессов: принятие решений, назначение ответственных, разработка политик. Требуется подтверждение интеграции принципов во внутренние документы.
-                    </div>
-                </div>
-                
-                <div class="principle-card">
-                    <div class="principle-title">
-                        <span class="number">2</span>
-                        <span>Принцип 2: Анализ и мониторинг объектов инвестиций</span>
-                    </div>
-                    <div class="text">
-                        Описание методик анализа финансовых и нефинансовых факторов. Особое внимание к ESG-факторам и показателям устойчивого развития (см. Приложение 3). Документирование результатов мониторинга.
-                    </div>
-                </div>
-                
-                <div class="principle-card">
-                    <div class="principle-title">
-                        <span class="number">3</span>
-                        <span>Принцип 3: Реализация корпоративных прав</span>
-                    </div>
-                    <div class="text">
-                        Подробное описание практик голосования на собраниях акционеров. Информация о разработке/актуализации Политики по голосованию. Описание случаев реализации права на судебную защиту (при наличии).
-                    </div>
-                </div>
-                
-                <div class="principle-card">
-                    <div class="principle-title">
-                        <span class="number">4</span>
-                        <span>Принцип 4: Взаимодействие с эмитентами</span>
-                    </div>
-                    <div class="text">
-                        Описание утвержденной Политики по взаимодействию с эмитентами. Конкретные примеры взаимодействия по различным вопросам. Механизмы эскалации при отсутствии прогресса.
-                    </div>
-                </div>
-                
-                <div class="principle-card">
-                    <div class="principle-title">
-                        <span class="number">5</span>
-                        <span>Принцип 5: Содействие повышению акционерной стоимости</span>
-                    </div>
-                    <div class="text">
-                        Анализ наличия и качества стратегий повышения акционерной стоимости у эмитентов. Описание мер стимулирования разработки таких стратегий. Учет показателей TSR (совокупной доходности акционеров).
-                    </div>
-                </div>
-                
-                <div class="principle-card">
-                    <div class="principle-title">
-                        <span class="number">6</span>
-                        <span>Принцип 6: Управление конфликтом интересов</span>
-                    </div>
-                    <div class="text">
-                        Описание процедур выявления и управления конфликтами интересов. Конкретные примеры потенциальных конфликтных ситуаций и мер по их разрешению.
-                    </div>
-                </div>
-                
-                <div class="principle-card">
-                    <div class="principle-title">
-                        <span class="number">7</span>
-                        <span>Принцип 7: Работа с доверительными управляющими</span>
-                    </div>
-                    <div class="text">
-                        Заполняется УК, которые привлекают доверительных управляющих. Описание критериев выбора и контроля ДУ с учетом принципов КОИ.
-                    </div>
-                </div>
-                
-                <div class="principle-card">
-                    <div class="principle-title">
-                        <span class="number">8</span>
-                        <span>Принцип 8: Приверженность Кодексу и раскрытие информации</span>
-                    </div>
-                    <div class="text">
-                        Информация о публичном заявлении о следовании КОИ. Ссылки на опубликованные политики на официальном сайте. План раскрытия ежегодной информации о реализованных мерах.
-                    </div>
-                </div>
-                
-                <div class="principle-card">
-                    <div class="principle-title">
-                        <span class="number">9</span>
-                        <span>Принцип 9: Координация и взаимодействие институциональных инвесторов</span>
-                    </div>
-                    <div class="text">
-                        Участие в деятельности АРИ и Комитета участников рынка коллективных инвестиций. Описание взаимодействия с другими институциональными инвесторами. Участие в рабочих группах, комитетах, форумах.
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-paper-plane"></i> 4. Порядок представления отчётности</h2>
-                
-                <div class="subsection">
-                    <div class="text">
-                        4.1. Заполненный чек-лист направляется в АРИ ежегодно до 15 января года, следующего за отчётным.
-                    </div>
-                    
-                    <div class="text">
-                        4.2. Форматы представления:
-                    </div>
-                    
-                    <div class="highlight">
-                        <strong>Основной:</strong> файл Excel с исходным форматом (загружен в систему)<br>
-                        <strong>Дополнительно:</strong> сопроводительное письмо на бланке УК за подписью руководителя
-                    </div>
-                    
-                    <div class="text">
-                        4.3. Направление отчетности:
-                    </div>
-                    
-                    <div class="highlight">
-                        • Электронная почта: <a href="mailto:koi_report@ari.ru" style="color: #2a5bd7;">koi_report@ari.ru</a> (указать в сопроводительном письме)<br>
-                        • Через личный кабинет на сайте АРИ (после регистрации)
-                    </div>
-                    
-                    <div class="text">
-                        4.4. Контактное лицо в АРИ для консультаций:
-                    </div>
-                    
-                    <div class="highlight">
-                        [ФИО, должность, телефон, email] (будет указано в сопроводительном письме)
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-lightbulb"></i> 5. Дополнительные рекомендации</h2>
-                
-                <div class="text">
-                    5.1. При заполнении ориентируйтесь на принцип "соблюдай или объясняй": если рекомендация не выполняется, подробно объясните причины.
-                </div>
-                
-                <div class="text">
-                    5.2. Предоставляйте конкретные примеры, количественные показатели, ссылки на документы.
-                </div>
-                
-                <div class="text">
-                    5.3. Сохраняйте доказательства реализации мероприятий (протоколы, отчеты, переписка) для возможной проверки.
-                </div>
-                
-                <div class="text">
-                    5.4. Учитывайте, что АРИ может запросить дополнительные разъяснения или документы для формирования консолидированного отчета.
-                </div>
-                
-                <div class="text">
-                    5.5. Информация, предоставленная УК, будет использована АРИ для:
-                </div>
-                
-                <div class="highlight">
-                    • Формирования консолидированного отчета в Банк России<br>
-                    • Разработки рекомендаций по улучшению практик ответственного инвестирования<br>
-                    • Организации образовательных мероприятий и обмена лучшими практиками
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title"><i class="fas fa-lock"></i> 6. Конфиденциальность</h2>
-                
-                <div class="text">
-                    6.1. АРИ обеспечивает конфиденциальность предоставленной информации в соответствии с законодательством РФ и внутренними регламентами.
-                </div>
-                
-                <div class="text">
-                    6.2. Публикация консолидированной отчетности осуществляется в обезличенном виде.
-                </div>
-                
-                <div class="highlight">
-                    Ассоциация розничных инвесторов благодарит за сотрудничество и участие в развитии практик ответственного инвестирования в России!
-                </div>
-            </div>
-            
-            <div class="disclaimer">
-                Данная инструкция разработана на основе рекомендаций Банка России и может быть уточнена по мере развития регуляторных требований и практик ответственного инвестирования.
-            </div>
+        <p class="text">1.1. Ассоциация розничных инвесторов (АРИ) осуществляет консолидацию отчетности управляющих компаний (УК) о внедрении Кодекса ответственного инвестирования (КОИ) согласно Информационному письму Банка России от 07.07.2025 № ИН-02-28/90.</p>
+        
+        <p class="text">1.2. Настоящая инструкция разработана на основе:</p>
+        
+        <ul class="bullet-list">
+            <li>Кодекса ответственного инвестирования (приложение 1 к письму Банка России)</li>
+            <li>Формы уведомления о статусе внедрения принципов КОИ (приложение 2)</li>
+            <li>Чек-листа АРИ по методологии комментариев</li>
+        </ul>
+        
+        <p class="text">1.3. Управляющим компаниям — институциональным инвесторам рекомендуется направлять заполненный чек-лист в АРИ для формирования консолидированного отчета в Банк России.</p>
+    </div>
+    
+    <div class="content-section">
+        <h2 class="section-title">2. Порядок заполнения чек-листа</h2>
+        
+        <h3 class="subsection-title">2.1. Общая структура чек-листа</h3>
+        <p class="text">Чек-лист содержит следующие колонки:</p>
+        
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Колонка</th>
+                        <th>Описание</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td>Принцип КОИ (сгруппированные по 9 принципам)</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>Мероприятие/действие институционального инвестора</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>Рекомендуемая формулировка комментария для УК</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>Реализация (УК/АРИ)</td>
+                    </tr>
+                    <tr>
+                        <td>E</td>
+                        <td>Комментарий управляющей компании</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>Итоговый комментарий АРИ</td>
+                    </tr>
+                    <tr>
+                        <td>G</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr>
+                        <td>H</td>
+                        <td>Срок реализации</td>
+                    </tr>
+                    <tr>
+                        <td>I, J</td>
+                        <td>Ответственные</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         
-        <footer>
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-handshake"></i>
-                </div>
-                <div class="footer-text">
-                    Ассоциация розничных инвесторов (АРИ)<br>
-                    Консолидация отчетности о внедрении Кодекса ответственного инвестирования
-                </div>
-                <div class="contacts">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>koi_report@ari.ru</div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>Контактный телефон будет указан в сопроводительном письме</div>
-                    </div>
-                </div>
+        <h3 class="subsection-title">2.2. Подробные инструкции по заполнению</h3>
+        
+        <div class="highlight-box">
+            <div class="principle-header">
+                <div class="principle-number">C</div>
+                <div class="principle-title">Колонка C: Рекомендуемая формулировка комментария для УК</div>
             </div>
-        </footer>
+            <p class="text">Заполняется АРИ на основе рекомендаций Кодекса. Содержит примерные формулировки, которые УК могут использовать при описании своих практик. Не требует заполнения УК.</p>
+        </div>
+        
+        <div class="highlight-box">
+            <div class="principle-header">
+                <div class="principle-number">D</div>
+                <div class="principle-title">Колонка D: Реализация (УК/АРИ)</div>
+            </div>
+            <p class="text">Указывается ответственная сторона:</p>
+            <ul class="bullet-list">
+                <li>"УК" — если мероприятие реализуется непосредственно управляющей компанией</li>
+                <li>"АРИ" — если требуется участие/координация со стороны Ассоциации</li>
+                <li>"УК/АРИ" — при совместной реализации</li>
+            </ul>
+        </div>
+        
+        <div class="highlight-box">
+            <div class="principle-header">
+                <div class="principle-number">E</div>
+                <div class="principle-title">Колонка E: Комментарий управляющей компании</div>
+            </div>
+            <p class="text">Обязательное поле для заполнения УК. Описание фактических мероприятий, выполненных УК в рамках конкретного пункта.</p>
+            
+            <div class="example-box">
+                <strong>Примеры заполнения:</strong><br><br>
+                <em>Для пункта "1.1. Принятие решения о следовании Кодексу":</em><br>
+                "Решение принято Правлением УК 15.09.2024 (протокол № 45). Разработана и утверждена Политика ответственного инвестирования от 20.09.2024."<br><br>
+                <em>Для пункта "3.1. Участие в общих собраниях акционеров":</em><br>
+                "В 2024 году участвовали в 78 собраниях акционеров по 45 эмитентам. Доля участия составила 92% от общего количества доступных для голосования собраний."
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h2 class="section-title">3. Особенности заполнения по принципам КОИ</h2>
+        
+        <div class="principle-card">
+            <div class="principle-header">
+                <div class="principle-number">1</div>
+                <div class="principle-title">Принцип 1: Организация условий ответственного инвестирования</div>
+            </div>
+            <p class="text">Акцент на формализации процессов: принятие решений, назначение ответственных, разработка политик. Требуется подтверждение интеграции принципов во внутренние документы.</p>
+        </div>
+        
+        <div class="principle-card">
+            <div class="principle-header">
+                <div class="principle-number">2</div>
+                <div class="principle-title">Принцип 2: Анализ и мониторинг объектов инвестиций</div>
+            </div>
+            <p class="text">Описание методик анализа финансовых и нефинансовых факторов. Особое внимание к ESG-факторам и показателям устойчивого развития (см. Приложение 3). Документирование результатов мониторинга.</p>
+        </div>
+        
+        <div class="principle-card">
+            <div class="principle-header">
+                <div class="principle-number">3</div>
+                <div class="principle-title">Принцип 3: Реализация корпоративных прав</div>
+            </div>
+            <p class="text">Подробное описание практик голосования на собраниях акционеров. Информация о разработке/актуализации Политики по голосованию. Описание случаев реализации права на судебную защиту (при наличии).</p>
+        </div>
+        
+        <div class="principle-card">
+            <div class="principle-header">
+                <div class="principle-number">4</div>
+                <div class="principle-title">Принцип 4: Взаимодействие с эмитентами</div>
+            </div>
+            <p class="text">Описание утвержденной Политики по взаимодействию с эмитентами. Конкретные примеры взаимодействия по различным вопросам. Механизмы эскалации при отсутствии прогресса.</p>
+        </div>
+        
+        <div class="principle-card">
+            <div class="principle-header">
+                <div class="principle-number">5</div>
+                <div class="principle-title">Принцип 5: Содействие повышению акционерной стоимости</div>
+            </div>
+            <p class="text">Анализ наличия и качества стратегий повышения акционерной стоимости у эмитентов. Описание мер стимулирования разработки таких стратегий. Учет показателей TSR (совокупной доходности акционеров).</p>
+        </div>
+        
+        <div class="principle-card">
+            <div class="principle-header">
+                <div class="principle-number">6</div>
+                <div class="principle-title">Принцип 6: Управление конфликтом интересов</div>
+            </div>
+            <p class="text">Описание процедур выявления и управления конфликтами интересов. Конкретные примеры потенциальных конфликтных ситуаций и мер по их разрешению.</p>
+        </div>
+        
+        <div class="principle-card">
+            <div class="principle-header">
+                <div class="principle-number">7</div>
+                <div class="principle-title">Принцип 7: Работа с доверительными управляющими</div>
+            </div>
+            <p class="text">Заполняется УК, которые привлекают доверительных управляющих. Описание критериев выбора и контроля ДУ с учетом принципов КОИ.</p>
+        </div>
+        
+        <div class="principle-card">
+            <div class="principle-header">
+                <div class="principle-number">8</div>
+                <div class="principle-title">Принцип 8: Приверженность Кодексу и раскрытие информации</div>
+            </div>
+            <p class="text">Информация о публичном заявлении о следовании КОИ. Ссылки на опубликованные политики на официальном сайте. План раскрытия ежегодной информации о реализованных мерах.</p>
+        </div>
+        
+        <div class="principle-card">
+            <div class="principle-header">
+                <div class="principle-number">9</div>
+                <div class="principle-title">Принцип 9: Координация и взаимодействие институциональных инвесторов</div>
+            </div>
+            <p class="text">Участие в деятельности АРИ и Комитета участников рынка коллективных инвестиций. Описание взаимодействия с другими институциональными инвесторами. Участие в рабочих группах, комитетах, форумах.</p>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h2 class="section-title">4. Порядок представления отчётности</h2>
+        
+        <p class="text">4.1. Заполненный чек-лист направляется в АРИ ежегодно до 15 января года, следующего за отчётным.</p>
+        
+        <p class="text">4.2. Форматы представления:</p>
+        
+        <div class="highlight-box">
+            <strong>Основной:</strong> файл Excel с исходным форматом (загружен в систему)<br>
+            <strong>Дополнительно:</strong> сопроводительное письмо на бланке УК за подписью руководителя
+        </div>
+        
+        <p class="text">4.3. Направление отчетности:</p>
+        
+        <div class="highlight-box">
+            • Электронная почта: koi_report@ari.ru (указать в сопроводительном письме)<br>
+            • Через личный кабинет на сайте АРИ (после регистрации)
+        </div>
+        
+        <div class="contact-info">
+            <div class="contact-title">Контактное лицо в АРИ для консультаций:</div>
+            <p class="text">[ФИО, должность, телефон, email] (будет указано в сопроводительном письме)</p>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h2 class="section-title">5. Дополнительные рекомендации</h2>
+        
+        <p class="text">5.1. При заполнении ориентируйтесь на принцип "соблюдай или объясняй": если рекомендация не выполняется, подробно объясните причины.</p>
+        
+        <p class="text">5.2. Предоставляйте конкретные примеры, количественные показатели, ссылки на документы.</p>
+        
+        <p class="text">5.3. Сохраняйте доказательства реализации мероприятий (протоколы, отчеты, переписка) для возможной проверки.</p>
+        
+        <p class="text">5.4. Учитывайте, что АРИ может запросить дополнительные разъяснения или документы для формирования консолидированного отчета.</p>
+        
+        <p class="text">5.5. Информация, предоставленная УК, будет использована АРИ для:</p>
+        
+        <ul class="bullet-list">
+            <li>Формирования консолидированного отчета в Банк России</li>
+            <li>Разработки рекомендаций по улучшению практик ответственного инвестирования</li>
+            <li>Организации образовательных мероприятий и обмена лучшими практиками</li>
+        </ul>
+    </div>
+    
+    <div class="content-section">
+        <h2 class="section-title">6. Конфиденциальность</h2>
+        
+        <p class="text">6.1. АРИ обеспечивает конфиденциальность предоставленной информации в соответствии с законодательством РФ и внутренними регламентами.</p>
+        
+        <p class="text">6.2. Публикация консолидированной отчетности осуществляется в обезличенном виде.</p>
+        
+        <div class="highlight-box">
+            Ассоциация розничных инвесторов благодарит за сотрудничество и участие в развитии практик ответственного инвестирования в России!
+        </div>
+        
+        <p class="text" style="margin-top: 20px; font-style: italic; color: #6b7280;">
+            Данная инструкция разработана на основе рекомендаций Банка России и может быть уточнена по мере развития регуляторных требований и практик ответственного инвестирования.
+        </p>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-logo">АССОЦИАЦИЯ РОЗНИЧНЫХ ИНВЕСТОРОВ</div>
+        <p>Объединение розничных инвесторов российских эмитентов</p>
     </div>
 </body>
 </html>
